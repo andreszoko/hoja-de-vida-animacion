@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Vida - Jhonatan Cifuentes</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <div class="contenedor">
+        <img src="Captura de pantalla 2024-09-10 200435.png" alt="Jhonatan Cifuentes" class="foto-perfil" onclick="toggleInfo()">
+        <h1 id="nombre" onclick="toggleInfo()">Jhonatan Cifuentes</h1>
+        
+        <div id="informacion" class="informacion-escondida">
+            <p>Vivo en: Bogotá, Colombia</p>
+            <p>Edad: 23 años</p>
+            <p>Cursando: Cuarto semestre</p>
+        </div>
+
+        <h3>Habilidades</h3>
+        <div class="habilidades">
+            <div class="habilidad">
+                <img src="html.png" alt="HTML" class="habilidad-logo">
+                <p>HTML</p>
+            </div>
+            <div class="habilidad">
+                <img src="css.png" alt="CSS" class="habilidad-logo">
+                <p>CSS</p>
+            </div>
+            <div class="habilidad">
+                <img src="c mas.png" alt="C#" class="habilidad-logo">
+                <p>C#</p>
+            </div>
+            <div class="habilidad">
+                <img src="js.png"JavaScript" class="habilidad-logo">
+                <p>JavaScript</p>
+            </div>
+            <div class="habilidad">
+                <a href="https://github.com/jhontanfcg" target="_blank">
+                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="habilidad-logo">
+                    <p>GitHub</p>
+                </a>
+            </div>
+        </div>
+
+        <a href="HOJA DE VIDA JHONATAN CIFUENTES.pdf" class="btn btn_download">Descargar CV</a>
+    </div>
+    
+    <script src="script.js"></script>
+    <script>
+        function toggleInfo() {
+            const info = document.getElementById('informacion');
+            const nombre = document.getElementById('nombre');
+
+            // Animación para mostrar/ocultar información
+            if (info.style.display === 'none' || info.style.display === '') {
+                gsap.fromTo(info, { height: 0, opacity: 0 }, { height: 'auto', opacity: 1, duration: 0.5 });
+                info.style.display = 'block';
+            } else {
+                gsap.to(info, { height: 0, opacity: 0, duration: 0.5, onComplete: () => info.style.display = 'none' });
+            }
+
+            // Efecto en el nombre
+            gsap.fromTo(nombre, { scale: 1 }, { scale: 1.1, duration: 0.5, yoyo: true, repeat: 1 });
+        }
+    </script>
+</body>
+</html>

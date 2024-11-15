@@ -1,0 +1,78 @@
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.contenedor {
+    max-width: 800px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.foto-perfil {
+    width: 200px; /* Aumenta el tamaño de la foto */
+    height: auto;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+h1 {
+    color: #007BFF;
+    cursor: pointer; /* Cambia el cursor para indicar que es clickeable */
+    font-size: 2.5em; /* Aumenta el tamaño de la fuente del nombre */
+    transition: transform 0.3s ease; /* Transición suave para el efecto de hover */
+}
+
+h1:hover {
+    transform: scale(1.05); /* Efecto de aumento al pasar el mouse sobre el nombre */
+}
+
+.informacion-escondida {
+    display: none; /* Inicialmente escondido */
+    margin-top: 20px;
+    transition: opacity 0.5s ease; /* Transición suave para la opacidad */
+}
+
+.habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.habilidad {
+    margin: 10px;
+    text-align: center;
+}
+
+.habilidad-logo {
+    width: 60px; /* Ajusta el tamaño del logo */
+    height: 60px;
+    transition: transform 0.3s ease; /* Transición suave para el efecto de hover */
+}
+
+.habilidad-logo:hover {
+    transform: scale(1.1); /* Efecto de aumento al pasar el mouse sobre el logo */
+}
+
+.btn_download {
+    background-color: #007BFF; /* Color del botón */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.btn_download:hover {
+    background-color: #0056b3; /* Color del botón al pasar el mouse */
+}
